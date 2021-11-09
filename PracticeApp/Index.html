@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Test</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function EnableDisableTextBox() {
+            var rb1 = document.getElementById("rb1");
+            var rb2 = document.getElementById("rb2");
+            var rb3 = document.getElementById("rb3");
+            tb1.disabled = rb1.checked || rb2.checked || rb3.checked ? false : true;
+            tb2.disabled = rb1.checked || rb2.checked || rb3.checked ? false : true;
+            if (!tb1.disabled && !tb2.disabled)
+            {
+                tb4.focus();
+                tb5.focus();
+            }
+        }
+    </script>
+    <span>Communication Method : </span>
+    <label for="rb1">
+        <input type="radio" id="rb1" name="textBox" onclick="EnableDisableTextBox()" />
+        SMS
+    </label>
+    <label for="rb2">
+        <input type="radio" id="rb2" name="textBox" onclick="EnableDisableTextBox()" />
+        MMS
+    </label>
+    <label for="rb3">
+        <input type="radio" id="rb3" name="textBox" onclick="EnableDisableTextBox()" />
+        E-Mail
+    </label>
+    <br /><br />
+    Quantity :
+    <input type="text" id="tb1" disabled="disabled" />
+    <br /><br />
+    Threshold (%) :
+    <input type="text" id="tb2" disabled="disabled" />
+    
+</body>
+</html>
